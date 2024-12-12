@@ -1,0 +1,499 @@
+Tokala Sreeja@Sreeja MINGW64 ~ (master)
+$ git version
+git version 2.46.1.windows.1
+
+Tokala Sreeja@Sreeja MINGW64 ~ (master)
+$ mkdir intweek2
+
+Tokala Sreeja@Sreeja MINGW64 ~ (master)
+$ cid intweek2
+bash: cid: command not found
+
+Tokala Sreeja@Sreeja MINGW64 ~ (master)
+$ cd intweek2
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git init
+Initialized empty Git repository in C:/Users/Tokala Sreeja/intweek2/.git/
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first doc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git add first doc.txt
+fatal: pathspec 'first' did not match any files
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        firstDoc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ gid add firstDoc.txt
+bash: gid: command not found
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git add firstDoc.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   firstDoc.txt
+
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   firstDoc.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   firstDoc.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Hello.java.txt
+        index.html
+
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git add --all
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Hello.java.txt
+        new file:   firstDoc.txt
+        new file:   index.html
+
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git commit -m "My first commit"
+[master (root-commit) aaca62d] My first commit
+ 3 files changed, 17 insertions(+)
+ create mode 100644 Hello.java.txt
+ create mode 100644 firstDoc.txt
+ create mode 100644 index.html
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   firstDoc.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git commit -m "Updated firstDoc.txt file"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   firstDoc.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git add firstDoc.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   firstDoc.txt
+
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git commit -m "Updated firstDoc.txt file"
+[master 1306f91] Updated firstDoc.txt file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git log
+commit 1306f91d6c9f7cbae9fa42792f74aafd62969195 (HEAD -> master)
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:48:25 2024 +0530
+
+    Updated firstDoc.txt file
+
+commit aaca62d52ec7de2aae0b615fcec4719dc8780a12
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:15:32 2024 +0530
+
+    My first commit
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git diff
+diff --git a/Hello.java.txt b/Hello.java.txt
+index 5d55099..3617025 100644
+--- a/Hello.java.txt
++++ b/Hello.java.txt
+@@ -1,5 +1,6 @@
+ class Hello{
+ public static void main(String args[]){
+ System.out.println("Hello World");
++System.out.println("Change");
+ }
+ }
+\ No newline at end of file
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git commit -a -m "Changed hello.java"
+[master f07cce6] Changed hello.java
+ 1 file changed, 1 insertion(+)
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git log
+commit f07cce603f83881a21f31c18b42cfb5a10ee8573 (HEAD -> master)
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:50:58 2024 +0530
+
+    Changed hello.java
+
+commit 1306f91d6c9f7cbae9fa42792f74aafd62969195
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:48:25 2024 +0530
+
+    Updated firstDoc.txt file
+
+commit aaca62d52ec7de2aae0b615fcec4719dc8780a12
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:15:32 2024 +0530
+
+    My first commit
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Cn.txt
+        devops.txt
+        ppl.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git add --all
++
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git commit "Subject files are added"
+error: pathspec 'Subject files are added' did not match any file(s) known to git
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git commit -m "Subject files are added"
+[master ed5df3e] Subject files are added
+ 3 files changed, 3 insertions(+)
+ create mode 100644 Cn.txt
+ create mode 100644 devops.txt
+ create mode 100644 ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git log
+commit ed5df3ea90513a2bd2bb23025542135453294acb (HEAD -> master)
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:55:25 2024 +0530
+
+    Subject files are added
+
+commit f07cce603f83881a21f31c18b42cfb5a10ee8573
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:50:58 2024 +0530
+
+    Changed hello.java
+
+commit 1306f91d6c9f7cbae9fa42792f74aafd62969195
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:48:25 2024 +0530
+
+    Updated firstDoc.txt file
+
+commit aaca62d52ec7de2aae0b615fcec4719dc8780a12
+Author: Sreeja <sreejareddy7474@gmail.com>
+Date:   Thu Dec 12 21:15:32 2024 +0530
+
+    My first commit
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git branch one
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git branch
+* master
+  one
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git checkout one
+Switched to branch 'one'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git branch two
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git branch three
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git branch
+  master
+* one
+  three
+  two
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git branch four
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git branch -d three
+Deleted branch three (was ed5df3e).
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git branch
+  four
+  master
+* one
+  two
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git checkout two
+Switched to branch 'two'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (two)
+$ git branch
+  four
+  master
+  one
+* two
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (two)
+$ ls
+Cn.txt          devops.txt    index.html
+Hello.java.txt  firstDoc.txt  ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (two)
+$ git checkout master
+Switched to branch 'master'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ ls
+Cn.txt          devops.txt    index.html
+Hello.java.txt  firstDoc.txt  ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git checkout four
+Switched to branch 'four'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ ls
+Cn.txt          devops.txt    index.html
+Hello.java.txt  firstDoc.txt  ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ git checkout master
+Switched to branch 'master'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git add ddb.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git commit -m "DDB added"
+[master b5969e2] DDB added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ddb.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ ls
+Cn.txt          ddb.txt     firstDoc.txt  ppl.txt
+Hello.java.txt  devops.txt  index.html
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (master)
+$ git checkout four
+Switched to branch 'four'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ ls
+Cn.txt          devops.txt    index.html
+Hello.java.txt  firstDoc.txt  ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ git add fourFile.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ git commit "Fourfile added"
+error: pathspec 'Fourfile added' did not match any file(s) known to git
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ git commit -m "Fourfile added"
+[four b847191] Fourfile added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourFile.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ ls
+Cn.txt          devops.txt    fourFile.txt  ppl.txt
+Hello.java.txt  firstDoc.txt  index.html
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (four)
+$ git checkout one
+Switched to branch 'one'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ ls
+Cn.txt          devops.txt    index.html
+Hello.java.txt  firstDoc.txt  ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git merge four
+Updating ed5df3e..b847191
+Fast-forward
+ fourFile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourFile.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ ls
+Cn.txt          devops.txt    fourFile.txt  ppl.txt
+Hello.java.txt  firstDoc.txt  index.html
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git rm devops.txt
+rm 'devops.txt'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ ls
+Cn.txt          firstDoc.txt  index.html
+Hello.java.txt  fourFile.txt  ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git rm ppl.txt
+rm 'ppl.txt'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git add oneFile.txt
+fatal: pathspec 'oneFile.txt' did not match any files
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git add oneFile.txt.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git commit -m "OneFile added"
+[one beb8edc] OneFile added
+ 3 files changed, 1 insertion(+), 2 deletions(-)
+ delete mode 100644 devops.txt
+ create mode 100644 oneFile.txt.txt
+ delete mode 100644 ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ ls
+Cn.txt          firstDoc.txt  index.html
+Hello.java.txt  fourFile.txt  oneFile.txt.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git checkout two
+Switched to branch 'two'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (two)
+$ ls
+Cn.txt          devops.txt    index.html
+Hello.java.txt  firstDoc.txt  ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (two)
+$ got checkout one
+bash: got: command not found
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (two)
+$ git checkout one
+Switched to branch 'one'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git merge two
+Already up to date.
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git checkout one
+Already on 'one'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (one)
+$ git checkout two
+Switched to branch 'two'
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (two)
+$ git merge one
+Updating ed5df3e..beb8edc
+Fast-forward
+ devops.txt      | 1 -
+ fourFile.txt    | 1 +
+ oneFile.txt.txt | 1 +
+ ppl.txt         | 1 -
+ 4 files changed, 2 insertions(+), 2 deletions(-)
+ delete mode 100644 devops.txt
+ create mode 100644 fourFile.txt
+ create mode 100644 oneFile.txt.txt
+ delete mode 100644 ppl.txt
+
+Tokala Sreeja@Sreeja MINGW64 ~/intweek2 (two)
+$
